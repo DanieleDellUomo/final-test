@@ -1,0 +1,16 @@
+<div>
+    <h1>Lista delle attività</h1>
+    <div *ngFor="let elem of localList">
+        <div>
+            <p> {{ elem.activity }}</p>
+            <p> {{ elem.type }}</p>
+            <p> {{ elem.price }}</p>
+            <button  routerLink="/details/{{elem.key}}">Dettagli</button>
+        </div>
+    </div>
+    <button routerLink="/dashboard">Richiedi un'attività</button>
+</div>
+
+<ng-container *ngIf="localList.length == 0">
+    <h1>NESSUN ELEMENTO PRESENTE IN LISTA</h1>
+</ng-container>
