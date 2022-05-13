@@ -8,7 +8,7 @@ import { ActivityService } from '../activity.service';
 })
 export class ListActivityComponent implements OnInit {
 
-  localList = this.http.activity;
+  list = this.http.activity;
 
   constructor(private http: ActivityService) { }
 

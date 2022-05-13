@@ -1,6 +1,6 @@
 <div>
     <h1>Lista delle attività</h1>
-    <div *ngFor="let elem of localList">
+    <div *ngFor="let elem of list">
         <div>
             <p> {{ elem.activity }}</p>
             <p> {{ elem.type }}</p>
@@ -11,6 +11,6 @@
     <button routerLink="/dashboard">Richiedi un'attività</button>
 </div>
 
-<ng-container *ngIf="localList.length == 0">
+<ng-container *ngIf="list.length == 0">
     <h1>NESSUN ELEMENTO PRESENTE IN LISTA</h1>
 </ng-container>

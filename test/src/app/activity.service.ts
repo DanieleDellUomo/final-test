@@ -15,7 +15,7 @@ export class ActivityService {
     )
   }
   getElement(key: string){
-    const elemento = this.activity.find(elem => elem.key == key)
+    const elemento = this.activity.find((elem: { key: string; }) => elem.key == key)
     console.log(elemento)
     return elemento
   }
